@@ -72,7 +72,7 @@ nav{
   transition: 0.5s ease-in-out;
 }
 
-@media all and (max-width: 800px) {
+@media all and (max-width: 200px) {
   .menu{
     display: block;
   }
