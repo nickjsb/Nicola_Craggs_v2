@@ -2,16 +2,30 @@
   margin: 0;
   padding: 0;
   border: border-box;
+  scroll-behavior: smooth;
+  overflow-y: scroll;
 }
 
 a{
   text-decoration: none;
 }
 
-li{
+.nav-links li{
    list-style: none;
 }
 
+.header{
+  font-family: "Snell Roundhand";
+  text-align: center;
+}
+
+/* iframe {
+  display: block;       /* iframes are inline by default 
+  background: #000;
+  border: none;         /* Reset default border 
+  height: 100vh;        /* Viewport-relative units 
+  width: 100vw;
+} */
 
 nav{
   display: flex;
@@ -40,6 +54,35 @@ nav{
   font-weight: 400;
   font-size: 25px;
 }
+
+.column {
+  /*text-align: center;*/
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+
+.column ul {
+  list-style: none;
+  margin: 20px auto;
+  padding: 0px;
+}
+
+.column li {
+  display: inline;
+  margin: 0px 30px;
+}
+
+/*
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+*/
+
 
 .back-img{
   width: 100%;
@@ -101,4 +144,61 @@ nav{
   .show{
     transform: translateX(0px);
   }
+}
+
+.header {
+  text-align: center;
+  padding: 32px;
+}
+
+/* Create two equal columns that sits next to each other */
+
+
+
+
+/* Style the buttons */
+.btn {
+  border: none;
+  outline: none;
+  padding: 10px 16px;
+  background-color: #f1f1f1;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+.btn:hover {
+  background-color: #ddd;
+}
+
+.btn.active {
+  background-color: #666;
+  color: white;
+}
+
+.row {
+   display: flex;
+   flex-wrap: wrap;
+   padding: 0 4px;
+}
+.column {
+   flex: 25%;
+   max-width: 25%;
+   padding: 0 4px;
+}
+.column img {
+   margin-top: 8px;
+   width: 100%;
+   padding: 10px;
+}
+@media screen and (max-width: 800px) {
+   .column {
+      flex: 50%;
+      max-width: 50%;
+   }
+}
+@media screen and (max-width: 600px) {
+   .column {
+      flex: 100%;
+      max-width: 100%;
+   }
 }

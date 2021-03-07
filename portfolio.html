@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewpoint" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>NicolaCraggs</title>
+  </head>
+  <body>
+    <nav>
+      <div class="logo">Portfolio</div>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="portfolio.html">Portfolio</a></li>
+        <li><a href="social.html">Social Media</a></li>
+        <li><a href="getintouch.html">Get in touch</a></li>
+      </ul>
+      <div class="menu">
+        <div></div>
+        <div></div>
+        <div></div>
+
+
+      </div>
+    </nav>
+
+    <div class="header" id="myHeader">
+        <h1>Here is my Portfolio</h1>
+    </div>
+
+
+  <!-- Photo Grid -->
+    <div class="column">
+      <ul>
+        <li>
+          <a href=""><img src="images/IMG_6304.jpg" style="width:100%"></a>
+          <a href=""><img src="images/IMG_6305.jpg" style="width:100%"></a>
+          <a href=""><img src="images/IMG_6306.jpg" style="width:100%"></a>
+          <a href=""><img src="images/IMG_6307.jpg" style="width:100%"></a>
+          <a href=""><img src="images/IMG_6308.jpg" style="width:100%"></a>
+          <a href=""><img src="images/IMG_6311.jpg" style="width:100%"></a>
+          <a href=""><img src="images/IMG_6313.jpg" style="width:100%"></a>
+          <a href=""><img src="images/IMG_6314.jpg" style="width:100%"></a>
+          <a href=""><img src="images/IMG_6315.jpg" style="width:100%"></a>
+          <a href=""><img src="images/IMG_6316.jpg" style="width:100%"></a>
+          <a href=""><img src="images/IMG_6317.jpg" style="width:100%"></a>
+          <a href=""><img src="images/IMG_6318.jpg" style="width:100%"></a>
+          <a href=""><img src="images/IMG_6321.jpg" style="width:100%"></a>
+        </li>
+      </ul>
+    </div>
+
+
+    <!-- <div class="back-img"></div> -->
+
+    <div class="overlay"></div>
+
+
+        <!-- Header -->
+
+
+    <script>
+      let menu = document.querySelector(".menu");
+      let nav_links = document.querySelector(".nav-links");
+      let overlay = document.querySelector(".overlay");
+
+      menu.addEventListener("click", () => {
+        // console.log("it's working");
+        nav_links.classList.toggle("show");
+        overlay.classList.toggle("black-overlay");
+      })
+
+      overlay.addEventListener("click", () => {
+        nav_links.classList.toggle("show");
+        overlay.classList.toggle("black-overlay");
+      })
+
+      // Get the elements with class="column"
+      var elements = document.getElementsByClassName("column");
+
+      // Declare a loop variable
+      var i;
+
+      // Full-width images
+      function one() {
+          for (i = 0; i < elements.length; i++) {
+          elements[i].style.msFlex = "100%";  // IE10
+          elements[i].style.flex = "100%";
+        }
+      }
+
+      // Two images side by side
+      function two() {
+        for (i = 0; i < elements.length; i++) {
+          elements[i].style.msFlex = "50%";  // IE10
+          elements[i].style.flex = "50%";
+        }
+      }
+
+      // Four images side by side
+      function four() {
+        for (i = 0; i < elements.length; i++) {
+          elements[i].style.msFlex = "25%";  // IE10
+          elements[i].style.flex = "25%";
+        }
+      }
+
+      // Add active class to the current button (highlight it)
+      var header = document.getElementById("myHeader");
+      var btns = header.getElementsByClassName("btn");
+      for (var i = 0; i < btns.length; i++) {
+        btns[i].addEventListener("click", function() {
+          var current = document.getElementsByClassName("active");
+          current[0].className = current[0].className.replace(" active", "");
+          this.className += " active";
+        });
+      }
+
+
+    </script>
+  </body>
+</html>
